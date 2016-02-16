@@ -1,0 +1,6 @@
+The following characters may need replacing in the text files to be used as input in the Python scripts:
+
+“
+”
+‘
+’

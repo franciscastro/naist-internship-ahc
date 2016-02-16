@@ -1,0 +1,65 @@
+-------------------------------------------------------------------------------------------------------
+
+Author: Francisco Enrique Vicente Castro
+Correspondence: fevgcastro@gmail.com
+Description: READ ME for language model file generation from TED and single-word files
+Last modified: 23 October 2013
+
+-------------------------------------------------------------------------------------------------------
+
+Instructions for generating output files for LANGUAGE MODEL and LEXICON (single-word):
+
+-------------------------------------------------------------------------------------------------------
+
+Notes on the Python version used:
+- The programs were developed using Python 3.3 run on Windows 7
+
+-------------------------------------------------------------------------------------------------------
+
+Notes on naming schemes:
+- The directory and file naming schemes may be modified as needed. Simply modify the names in the source code provided. Refer to in-code documentation.
+
+-------------------------------------------------------------------------------------------------------
+
+Notes on the terminal commands used:
+- The terminal commands used were done on Windows 7 command prompt.
+
+-------------------------------------------------------------------------------------------------------
+
+1. The "TXT" directory contains the original files to be processed.
+
+2. The input files in the "TXT" directory have a naming scheme (for standardization) in the following format: sub<number>.txt, where <number> is simply a monitoring number for the input files. (Example: sub1.txt)
+
+3. When beginning the processing of the input, the language model files are generated first, followed by the generation of single-word files (single-word file gets input from the generated normalized language model files).
+
+4. It is best to begin with the empty directory files prepared alongside the "TXT" directory: "OUTPUT-LM" for the language model files to be generated and "OUTPUT-LEX" for the lexicon files to be generated.
+
+-------------------------------------------------------------------------------------------------------
+
+5. To generate the language model files, run "textprocess1.py"
+
+6. The generated language model files will be stored in the "OUTPUT-LM" directory.
+
+7. The language model files have a naming scheme: sub<number>-lm.txt, where <number> is simply a monitoring number for the ouput files. (Example: sub1-lm.txt)
+
+-------------------------------------------------------------------------------------------------------
+
+8. To generate the single-word files from the language model files, run "textprocess2.py"
+
+9. The generated single-word files will be stored in the "OUTPUT-LEX" directory.
+
+10. The single-word files have a naming scheme: sub<number>-lex.txt, where <number> is simply a monitoring number for the output files. (Example: sub1-lex.txt)
+
+-------------------------------------------------------------------------------------------------------
+
+11. To generate a file that combines all language model files, the following command is used: type OUTPUT-LM\*.txt > COMBINE-LM\combine-lm.txt.
+
+12. The generated combined language model file may be found in the COMBINE-LM directory.
+
+-------------------------------------------------------------------------------------------------------
+
+13. To generate a file that combines all single-word files, run "textprocess3.py".
+
+14. The generated combined single-word file may be found in the COMBINE-LEX directory.
+
+-------------------------------------------------------------------------------------------------------
